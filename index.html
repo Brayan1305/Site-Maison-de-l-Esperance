@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Maison de l'Esperance</h1>
+        </div>
+        <div class="header-right">
+            <a href=""></a>decouvrir
+            <a href=""></a>parlons-en
+            <a href=""></a>bible
+        </div>
+    </header>
+
+    <input type="checkbox" id="filtre-bible" class="f-type">
+    <input type="checkbox" id="filtre-etude" class="f-type">
+    <input type="checkbox" id="filtre-demande-priere" class="f-type">
+
+    <input type="checkbox" id="filtre-presentiel" class="f-format">
+    <input type="checkbox" id="filtre-visio" class="f-format">
+    <input type="checkbox" id="filtre-distanciel" class="f-format">
+    <input type="checkbox" id="filtre-non" class="f-format">
+
+    <input type="checkbox" id="filtre-janvier" class="f-mois">
+    <input type="checkbox" id="filtre-fevrier" class="f-mois">
+    <input type="checkbox" id="filtre-mars" class="f-mois">
+    <input type="checkbox" id="filtre-avril" class="f-mois">
+    <input type="checkbox" id="filtre-mai" class="f-mois">
+    <input type="checkbox" id="filtre-juin" class="f-mois">
+
+    <div class="div-principale">
+        <fieldset>
+            <legend>Veuilez selectionner le type:</legend>
+            <div class="bouton-filtre"><label for="filtre-bible">Bible gratuite</label></div>
+            <div class="bouton-filtre"><label for="filtre-etude">Etude Biblique</label></div>
+            <div class="bouton-filtre"><label for="filtre-demande-priere">Demande prière</label></div>
+        </fieldset>
+
+        <fieldset id="bloc-format">
+            <legend>Veuilez selectionner format :</legend>
+            <div class="bouton-filtre"><label for="filtre-presentiel">Présentiel</label></div>
+            <div class="bouton-filtre"><label for="filtre-visio">Visio</label></div>
+            <div class="bouton-filtre"><label for="filtre-distanciel">Distanciel</label></div>
+            <div class="bouton-filtre"><label for="filtre-non">Non</label></div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Veuilez selectionner le mois:</legend>
+            <div class="bouton-filtre"><label for="filtre-janvier">Janvier</label></div>
+            <div class="bouton-filtre"><label for="filtre-février">Février</label></div>
+            <div class="bouton-filtre"><label for="filtre-mars">Mars</label></div>
+            <div class="bouton-filtre"><label for="filtre-avril">Avril</label></div>
+            <div class="bouton-filtre"><label for="filtre-mai">Mai</label></div>
+            <div class="bouton-filtre"><label for="filtre-juin">Juin</label></div>
+        </fieldset>
+    </div>
+
+    <p id="compteur">Résultat : <span id="total-elements">0</span> élément(s) trouvé(s)</p>
+
+    <div class="conteneur-evenements">
+        <div class="item-evenement bible presentiel janvier">Distribution Bible - Janvier (Présentiel)</div>
+        <div class="item-evenement etude visio fevrier">Étude Biblique - Février (Visio)</div>
+        <div class="item-evenement demande-priere distanciel mars">Session Prière - Mars (Distanciel)</div>
+    </div>
+
+    <div></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
