@@ -4,6 +4,24 @@ header {
     align-items: center;
     padding: 0px 15px;
 }
+/* Combine les filtres */
+#filtre-bible:checked ~ .conteneur-evenements .item-evenement:not(.bible) { display: none; }
+#filtre-etude:checked ~ .conteneur-evenements .item-evenement:not(.etude) { display: none; }
+#filtre-demande-priere:checked ~ .conteneur-evenements .item-evenement:not(.demande-priere) { display: none; }
+
+#filtre-presentiel:checked ~ .conteneur-evenements .item-evenement:not(.presentiel) { display: none; }
+#filtre-visio:checked ~ .conteneur-evenements .item-evenement:not(.visio) { display: none; }
+#filtre-distanciel:checked ~ .conteneur-evenements .item-evenement:not(.distanciel) { display: none; }
+#filtre-non:checked ~ .conteneur-evenements .item-evenement:not(.non) { display: none; }
+
+#filtre-janvier:checked ~ .conteneur-evenements .item-evenement:not(.janvier) { display: none; }
+#filtre-fevrier:checked ~ .conteneur-evenements .item-evenement:not(.fevrier) { display: none; }
+#filtre-mars:checked ~ .conteneur-evenements .item-evenement:not(.mars) { display: none; }
+#filtre-avril:checked ~ .conteneur-evenements .item-evenement:not(.avril) { display: none; }
+#filtre-mai:checked ~ .conteneur-evenements .item-evenement:not(.mai) { display: none; }
+#filtre-juin:checked ~ .conteneur-evenements .item-evenement:not(.juin) { display: none; }
+
+/* Changement de couleur quand sélectionner */
 #filtre-bible:checked ~ div label[for="filtre-bible"],
 #filtre-etude:checked ~ div label[for="filtre-etude"],
 #filtre-priere:checked ~ div label[for="filtre-priere"],
@@ -39,3 +57,26 @@ input[type="checkbox"]{
     display: flex;
     justify-content: space-between;
 } */
+
+#acceuil{
+    color: black;
+    text-decoration: none;
+}
+#suivie{
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width : 768px) {
+    .div-principale{
+        flex-direction: column;
+        gap: 15px;
+    }
+    fieldset{
+        flex: row;
+        flex-wrap: wrap;
+    }
+    .bouton-filtre{
+        flex: 1.1 calc(50% - 10px);
+    }
+}
