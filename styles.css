@@ -53,10 +53,6 @@ input[type="checkbox"]{
     display: flex;
     gap: 10px;
 }
-/* .div-principale{
-    display: flex;
-    justify-content: space-between;
-} */
 
 #acceuil{
     color: black;
@@ -79,4 +75,13 @@ input[type="checkbox"]{
     .bouton-filtre{
         flex: 1.1 calc(50% - 10px);
     }
+}
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.logo{
+    width: 90px;
+    height: 65px;
 }

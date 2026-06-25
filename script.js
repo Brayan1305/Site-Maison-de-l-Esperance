@@ -1,5 +1,3 @@
-console.log("bonjour")
-
 const inputs = document.querySelectorAll('input[type="checkbox"]');
 const elements = document.querySelectorAll('.item-evenement');
 const totalAffichage = document.getElementById('total-elements');

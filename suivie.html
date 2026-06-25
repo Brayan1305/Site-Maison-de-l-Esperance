@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,24 @@
 </head>
 
 <body>
-    <h1><a href="acceuil.html" id="acceuil">Esperance</a></h1>
+    <header>
+        <div class="header-left">
+            <img class="logo" src="image/HopeRadio.png" alt="">
+            <h1><a href="acceuil.html" id="acceuil"> Mon Espérance</a></h1>
+        </div>
+        <div class="header-right">
+            <a href=""></a>Étude Biblique
+            <a href=""></a>Studio
+            <a href=""></a>Suivie
+            <label for="site-search"></label>
+            <input type="search" id="site-search" name="q" required>
+            <button>Rechercher</button>
+        </div>
+    </header>
+    <!-- <div class="header-left">
+        <img class="logo" src="image/" alt="HopeRadio">
+        <h1><a href="acceuil.html" id="acceuil"> Mon Espérance</a></h1>
+    </div> -->
 
     <input type="checkbox" id="filtre-bible" class="f-type">
     <input type="checkbox" id="filtre-etude" class="f-type">
@@ -57,12 +75,34 @@
 
     <div class="conteneur-evenements">
         <div class="item-evenement bible presentiel janvier">Distribution Bible - Janvier (Présentiel)</div>
-        <div class="item-evenement etude visio fevrier">Étude Biblique - Février (Visio)</div>
-        <div class="item-evenement demande-priere distanciel mars">Session Prière - Mars (Distanciel)</div>
+        <div class="item-evenement bible visio fevrier">Distribution Bible - Février (Visio)</div>
+        <div class="item-evenement bible distanciel mars">Distribution Bible - Mars (Distanciel)</div>
+        <div class="item-evenement bible presentiel avril">Distribution Bible - Avril (Présentiel)</div>
+        <div class="item-evenement bible visio mai">Distribution Bible - Mai (Visio)</div>
+        <div class="item-evenement bible distanciel juin">Distribution Bible - Juin (Distanciel)</div>
+
+        <div class="item-evenement etude visio janvier">Étude Biblique - Janvier (Visio)</div>
+        <div class="item-evenement etude presentiel fevrier">Étude Biblique - Février (Présentiel)</div>
+        <div class="item-evenement etude distanciel mars">Étude Biblique - Mars (Distanciel)</div>
+        <div class="item-evenement etude visio avril">Étude Biblique - Avril (Visio)</div>
+        <div class="item-evenement etude presentiel mai">Étude Biblique - Mai (Présentiel)</div>
+        <div class="item-evenement etude distanciel juin">Étude Biblique - Juin (Distanciel)</div>
+
+        <div class="item-evenement demande-priere non janvier">Session Prière - Janvier (En ligne / Sans format)</div>
+        <div class="item-evenement demande-priere non fevrier">Session Prière - Février (En ligne / Sans format)</div>
+        <div class="item-evenement demande-priere non mars">Session Prière - Mars (Distanciel)</div>
+        <div class="item-evenement demande-priere non avril">Session Prière - Avril (En ligne / Sans format)</div>
+        <div class="item-evenement demande-priere non mai">Session Prière - Mai (En ligne / Sans format)</div>
+        <div class="item-evenement demande-priere non juin">Session Prière - Juin (En ligne / Sans format)</div>
     </div>
 
-    <div></div>
+    <div class="div-principale">
+        <fieldset id="bloc-departements">
+            <legend>Veuillez sélection le département</legend>
+        </fieldset>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
