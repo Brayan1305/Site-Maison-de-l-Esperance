@@ -4,7 +4,7 @@ header {
     align-items: center;
     padding: 0px 15px;
 }
-/* Combine les filtres */
+
 #filtre-bible:checked ~ .conteneur-evenements .item-evenement:not(.bible) { display: none; }
 #filtre-etude:checked ~ .conteneur-evenements .item-evenement:not(.etude) { display: none; }
 #filtre-demande-priere:checked ~ .conteneur-evenements .item-evenement:not(.demande-priere) { display: none; }
@@ -21,7 +21,6 @@ header {
 #filtre-mai:checked ~ .conteneur-evenements .item-evenement:not(.mai) { display: none; }
 #filtre-juin:checked ~ .conteneur-evenements .item-evenement:not(.juin) { display: none; }
 
-/* Changement de couleur quand sélectionner */
 #filtre-bible:checked ~ div label[for="filtre-bible"],
 #filtre-etude:checked ~ div label[for="filtre-etude"],
 #filtre-priere:checked ~ div label[for="filtre-priere"],
