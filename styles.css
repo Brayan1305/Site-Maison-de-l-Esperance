@@ -84,3 +84,21 @@ input[type="checkbox"]{
     width: 90px;
     height: 65px;
 }
+
+#filtre-dept13:checked ~ .conteneur-evenements .item-evenement:not(.dept13),
+#filtre-dept69:checked ~ .conteneur-evenements .item-evenement:not(.dept69),
+#filtre-dept75:checked ~ .conteneur-evenements .item-evenement:not(.dept75),
+#filtre-dept77:checked ~ .conteneur-evenements .item-evenement:not(.dept77),
+#filtre-dept91:checked ~ .conteneur-evenements .item-evenement:not(.dept91),
+#filtre-dept92:checked ~ .conteneur-evenements .item-evenement:not(.dept92),
+#filtre-dept93:checked ~ .conteneur-evenements .item-evenement:not(.dept93),
+#filtre-dept94:checked ~ .conteneur-evenements .item-evenement:not(.dept94),
+#filtre-dept95:checked ~ .conteneur-evenements .item-evenement:not(.dept95),
+#filtre-dept971:checked ~ .conteneur-evenements .item-evenement:not(.dept971),
+#filtre-dept972:checked ~ .conteneur-evenements .item-evenement:not(.dept972),
+#filtre-dept973:checked ~ .conteneur-evenements .item-evenement:not(.dept973),
+#filtre-dept974:checked ~ .conteneur-evenements .item-evenement:not(.dept974),
+#filtre-dept976:checked ~ .conteneur-evenements .item-evenement:not(.dept976)
+{
+    display:none;
+}

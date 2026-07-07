@@ -19,14 +19,10 @@
             <a href=""></a>Studio
             <a href=""></a>Suivie
             <label for="site-search"></label>
-            <input type="search" id="site-search" name="q" required>
-            <button>Rechercher</button>
+            <input type="search" id="site-search" name="q" required placeholder="recherche une demande">
+            <button id="btn-recherche">Rechercher</button>
         </div>
     </header>
-    <!-- <div class="header-left">
-        <img class="logo" src="image/" alt="HopeRadio">
-        <h1><a href="acceuil.html" id="acceuil"> Mon Espérance</a></h1>
-    </div> -->
 
     <input type="checkbox" id="filtre-bible" class="f-type">
     <input type="checkbox" id="filtre-etude" class="f-type">
@@ -43,6 +39,27 @@
     <input type="checkbox" id="filtre-avril" class="f-mois">
     <input type="checkbox" id="filtre-mai" class="f-mois">
     <input type="checkbox" id="filtre-juin" class="f-mois">
+
+    <input type="checkbox" id="filtre-site" class="f-source">
+    <input type="checkbox" id="filtre-email" class="f-email">
+    <input type="checkbox" id="filtre-telephone" class="f-telephone">
+    <input type="checkbox" id="filtre-reseau" class="f-reseau">
+
+    <!-- Filtres départements -->
+    <input type="checkbox" id="filtre-dept13">
+    <input type="checkbox" id="filtre-dept69">
+    <input type="checkbox" id="filtre-dept75">
+    <input type="checkbox" id="filtre-dept77">
+    <input type="checkbox" id="filtre-dept91">
+    <input type="checkbox" id="filtre-dept92">
+    <input type="checkbox" id="filtre-dept93">
+    <input type="checkbox" id="filtre-dept94">
+    <input type="checkbox" id="filtre-dept95">
+    <input type="checkbox" id="filtre-dept971">
+    <input type="checkbox" id="filtre-dept972">
+    <input type="checkbox" id="filtre-dept973">
+    <input type="checkbox" id="filtre-dept974">
+    <input type="checkbox" id="filtre-dept976">
 
     <div class="div-principale">
         <fieldset>
@@ -74,31 +91,93 @@
     <p id="compteur">Résultat : <span id="total-elements">0</span> élément(s) trouvé(s)</p>
 
     <div class="conteneur-evenements">
-        <div class="item-evenement bible presentiel janvier">Distribution Bible - Janvier (Présentiel)</div>
-        <div class="item-evenement bible visio fevrier">Distribution Bible - Février (Visio)</div>
-        <div class="item-evenement bible distanciel mars">Distribution Bible - Mars (Distanciel)</div>
-        <div class="item-evenement bible presentiel avril">Distribution Bible - Avril (Présentiel)</div>
-        <div class="item-evenement bible visio mai">Distribution Bible - Mai (Visio)</div>
-        <div class="item-evenement bible distanciel juin">Distribution Bible - Juin (Distanciel)</div>
+        <div class="item-evenement bible presentiel janvier dept75 source-site">Distribution Bible - Janvier(Présentiel)
+        </div>
+        <div class="item-evenement bible visio fevrier dept92 source-email">Distribution Bible - Février (Visio)</div>
+        <div class="item-evenement bible distanciel mars dept93 source-telephone">Distribution Bible - Mars (Distanciel)
+        </div>
+        <div class="item-evenement bible presentiel avril dept94 source-site">Distribution Bible - Avril (Présentiel)
+        </div>
+        <div class="item-evenement bible visio mai dept95 source-reseau">Distribution Bible - Mai (Visio)</div>
+        <div class="item-evenement bible distanciel juin dept971 source-email">Distribution Bible - Juin (Distanciel)
+        </div>
 
-        <div class="item-evenement etude visio janvier">Étude Biblique - Janvier (Visio)</div>
-        <div class="item-evenement etude presentiel fevrier">Étude Biblique - Février (Présentiel)</div>
-        <div class="item-evenement etude distanciel mars">Étude Biblique - Mars (Distanciel)</div>
-        <div class="item-evenement etude visio avril">Étude Biblique - Avril (Visio)</div>
-        <div class="item-evenement etude presentiel mai">Étude Biblique - Mai (Présentiel)</div>
-        <div class="item-evenement etude distanciel juin">Étude Biblique - Juin (Distanciel)</div>
+        <div class="item-evenement etude visio janvier dept75 source-email">Étude Biblique - Janvier (Visio)</div>
+        <div class="item-evenement etude presentiel fevrier dept91 source-site">Étude Biblique - Février (Présentiel)
+        </div>
+        <div class="item-evenement etude distanciel mars dept69 source-reseau">Étude Biblique - Mars (Distanciel)</div>
+        <div class="item-evenement etude visio avril dept973 source-telephone">Étude Biblique - Avril (Visio)</div>
+        <div class="item-evenement etude presentiel mai dept13 source-site">Étude Biblique - Mai (Présentiel)</div>
+        <div class="item-evenement etude distanciel juin dept976 source-email">Étude Biblique - Juin (Distanciel)</div>
 
-        <div class="item-evenement demande-priere non janvier">Session Prière - Janvier (En ligne / Sans format)</div>
-        <div class="item-evenement demande-priere non fevrier">Session Prière - Février (En ligne / Sans format)</div>
-        <div class="item-evenement demande-priere non mars">Session Prière - Mars (Distanciel)</div>
-        <div class="item-evenement demande-priere non avril">Session Prière - Avril (En ligne / Sans format)</div>
-        <div class="item-evenement demande-priere non mai">Session Prière - Mai (En ligne / Sans format)</div>
-        <div class="item-evenement demande-priere non juin">Session Prière - Juin (En ligne / Sans format)</div>
+        <div class="item-evenement demande-priere non janvier dept75 source-site">Session Prière - Janvier (En ligne/Sans format)</div>
+        <div class="item-evenement demande-priere non fevrier dept92 source-email">Session Prière - Février (En ligne/Sans format)</div>
+        <div class="item-evenement demande-priere non mars dept93 source-telephone">Session Prière - Mars (Distanciel)</div>
+        <div class="item-evenement demande-priere non avril dept974 source-site">Session Prière - Avril (En ligne /Sansformat)</div>
+        <div class="item-evenement demande-priere non mai dept77 source-site">Session Prière - Mai (En ligne /Sansformat)</div>
+        <div class="item-evenement demande-priere non juin dept972 source-email">Session Prière - Juin (En ligne /Sansformat)</div>
     </div>
 
     <div class="div-principale">
         <fieldset id="bloc-departements">
-            <legend>Veuillez sélection le département</legend>
+            <legend>Veuillez sélectionner le département :</legend>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept13">13</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept69">69</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept75">75</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept77">77</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept91">91</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept92">92</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept93">93</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept94">94</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept95">95</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept971">971</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept972">972</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept973">973</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept974">974</label>
+            </div>
+
+            <div class="bouton-filtre">
+                <label for="filtre-dept976">976</label>
+            </div>
+
         </fieldset>
     </div>
 
