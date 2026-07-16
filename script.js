@@ -21,3 +21,32 @@ inputs.forEach(input => {
 
 window.addEventListener('DOMContentLoaded', mettreAJourCompteur);
 
+const recherche = document.getElementById("site-search");
+const boutonRecherche = document.getElementById("btn-recherche");
+
+function rechercherDemandes() {
+
+    const texte = recherche.value.toLowerCase();
+
+    elements.forEach(element => {
+
+        if (element.textContent.toLowerCase().includes(texte)) {
+            element.style.display = "";
+        } else {
+            element.style.display = "none";
+        }
+
+    });
+
+    mettreAJourCompteur();
+}
+
+boutonRecherche.addEventListener("click", rechercherDemandes);
+
+recherche.addEventListener("keyup", function(event){
+
+    if(event.key === "Enter"){
+        rechercherDemandes();
+    }
+
+});
