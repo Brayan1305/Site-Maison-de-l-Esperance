@@ -1,25 +1,120 @@
+/* Fond général */
+
+body {
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+
+/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 15px;
+    padding: 10px 30px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
 }
 
-#filtre-bible:checked ~ .conteneur-evenements .item-evenement:not(.bible) { display: none; }
-#filtre-etude:checked ~ .conteneur-evenements .item-evenement:not(.etude) { display: none; }
-#filtre-demande-priere:checked ~ .conteneur-evenements .item-evenement:not(.demande-priere) { display: none; }
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-#filtre-presentiel:checked ~ .conteneur-evenements .item-evenement:not(.presentiel) { display: none; }
-#filtre-visio:checked ~ .conteneur-evenements .item-evenement:not(.visio) { display: none; }
-#filtre-distanciel:checked ~ .conteneur-evenements .item-evenement:not(.distanciel) { display: none; }
-#filtre-non:checked ~ .conteneur-evenements .item-evenement:not(.non) { display: none; }
+.logo {
+    width: 90px;
+    height: 65px;
+}
 
-#filtre-janvier:checked ~ .conteneur-evenements .item-evenement:not(.janvier) { display: none; }
-#filtre-fevrier:checked ~ .conteneur-evenements .item-evenement:not(.fevrier) { display: none; }
-#filtre-mars:checked ~ .conteneur-evenements .item-evenement:not(.mars) { display: none; }
-#filtre-avril:checked ~ .conteneur-evenements .item-evenement:not(.avril) { display: none; }
-#filtre-mai:checked ~ .conteneur-evenements .item-evenement:not(.mai) { display: none; }
-#filtre-juin:checked ~ .conteneur-evenements .item-evenement:not(.juin) { display: none; }
+.header-right {
+    display: flex;
+    align-items: center;
+    color: black;
+    gap: 20px;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+}
+
+#acceuil {
+    color: black;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* filtre par type de demande */
+
+#filtre-bible:checked ~ .conteneur-evenements .item-evenement:not(.bible) {
+    display: none;
+}
+
+#filtre-etude:checked ~ .conteneur-evenements .item-evenement:not(.etude) {
+    display: none;
+}
+
+#filtre-demande-priere:checked ~ .conteneur-evenements .item-evenement:not(.demande-priere) {
+    display: none;
+}
+
+#filtre-presentiel:checked ~ .conteneur-evenements .item-evenement:not(.presentiel) {
+    display: none;
+}
+
+#filtre-visio:checked ~ .conteneur-evenements .item-evenement:not(.visio) {
+    display: none;
+}
+
+#filtre-distanciel:checked ~ .conteneur-evenements .item-evenement:not(.distanciel) {
+    display: none;
+}
+
+#filtre-non:checked ~ .conteneur-evenements .item-evenement:not(.non) {
+    display: none;
+}
+
+#filtre-janvier:checked ~ .conteneur-evenements .item-evenement:not(.janvier) {
+    display: none;
+}
+
+#filtre-fevrier:checked ~ .conteneur-evenements .item-evenement:not(.fevrier) {
+    display: none;
+}
+
+#filtre-mars:checked ~ .conteneur-evenements .item-evenement:not(.mars) {
+    display: none;
+}
+
+#filtre-avril:checked ~ .conteneur-evenements .item-evenement:not(.avril) {
+    display: none;
+}
+
+#filtre-mai:checked ~ .conteneur-evenements .item-evenement:not(.mai) {
+    display: none;
+}
+
+#filtre-juin:checked ~ .conteneur-evenements .item-evenement:not(.juin) {
+    display: none;
+}
+
+
+/* filtre par format */
 
 #filtre-bible:checked ~ div label[for="filtre-bible"],
 #filtre-etude:checked ~ div label[for="filtre-etude"],
@@ -36,9 +131,13 @@ header {
 #filtre-avril:checked ~ div label[for="filtre-avril"],
 #filtre-mai:checked ~ div label[for="filtre-mai"],
 #filtre-juin:checked ~ div label[for="filtre-juin"] {
-    color: grey;              
-    font-weight: bold;         
+    color: grey;
+    font-weight: bold;
 }
+
+
+/* bloc format cache par defaut */
+
 #bloc-format {
     display: none;
 }
@@ -46,44 +145,16 @@ header {
 #filtre-demande-priere:checked ~ div #bloc-format {
     display: block;
 }
-input[type="checkbox"]{
+
+
+/* Cache les cases à cocher pour utiliser les labels comme boutons */
+
+input[type="checkbox"] {
     display: none;
-}.header-right{
-    display: flex;
-    gap: 10px;
 }
 
-#acceuil{
-    color: black;
-    text-decoration: none;
-}
-a{
-    color: black;
-    text-decoration: none;
-}
 
-@media (max-width : 768px) {
-    .div-principale{
-        flex-direction: column;
-        gap: 15px;
-    }
-    fieldset{
-        flex: row;
-        flex-wrap: wrap;
-    }
-    .bouton-filtre{
-        flex: 1.1 calc(50% - 10px);
-    }
-}
-.header-left{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.logo{
-    width: 90px;
-    height: 65px;
-}
+/* filtre par departements */
 
 #filtre-dept13:checked ~ .conteneur-evenements .item-evenement:not(.dept13),
 #filtre-dept69:checked ~ .conteneur-evenements .item-evenement:not(.dept69),
@@ -98,56 +169,269 @@ a{
 #filtre-dept972:checked ~ .conteneur-evenements .item-evenement:not(.dept972),
 #filtre-dept973:checked ~ .conteneur-evenements .item-evenement:not(.dept973),
 #filtre-dept974:checked ~ .conteneur-evenements .item-evenement:not(.dept974),
-#filtre-dept976:checked ~ .conteneur-evenements .item-evenement:not(.dept976)
-{
-    display:none;
+#filtre-dept976:checked ~ .conteneur-evenements .item-evenement:not(.dept976) {
+    display: none;
 }
 
-.statistiques{
+
+/* PAGE SUIVI DES DEMANDES */
+
+.div-principale {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.bouton-filtre {
+    display: inline-block;
+    margin: 5px;
+}
+
+.bouton-filtre label {
+    cursor: pointer;
+}
+
+
+/* Résultat */
+
+#compteur {
+    margin: 15px;
+    font-weight: bold;
+}
+
+
+/* Demandes */
+
+.conteneur-evenements {
+    margin: 15px;
+}
+
+.item-evenement {
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+
+/* Statistiques */
+
+.statistiques {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin-top: 40px;
+    margin: 40px 20px;
 }
 
-.carte-stat{
+.carte-stat {
     width: 220px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: center;
+    background-color: white;
 }
 
-.carte-stat h3{
+.carte-stat h3 {
     font-size: 18px;
     margin-bottom: 15px;
 }
 
-.carte-stat p{
-    font-size: 32px;
+.carte-stat p {
+    font-size: 30px;
     font-weight: bold;
+    margin: 0;
 }
+
 
 /* page biblique */
 
 main {
-    padding: 20px;
+    padding: 30px;
+    background-color: white;
+    margin: 20px;
+    border: 1px solid #ddd;
 }
 
-table {
+main h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+main table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: white;
 }
 
-th,
-td {
+main th,
+main td {
     border: 1px solid #ccc;
-    padding: 12px;
+    padding: 14px;
     text-align: center;
 }
 
-th {
-    background-color: #f0f0f0;
+main th {
+    background-color: #007acc;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* PAGE STUDIO */
+
+.studio-main {
+    padding: 30px;
+    background-color: white;
+    margin: 20px;
+    border: 1px solid #ddd;
+}
+
+.studio-titre {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #007acc;
+}
+
+.studio-description {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.studio-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.studio-table,
+.studio-table th,
+.studio-table td {
+    border: 1px solid #ccc;
+}
+
+.studio-table th {
+    background-color: #007acc;
+    color: white;
+    font-weight: bold;
+}
+
+.studio-table th,
+.studio-table td {
+    padding: 14px;
+    text-align: center;
+}
+
+
+/* PAGE ACCUEIL */
+
+.accueil-main {
+    padding: 30px;
+}
+
+
+/* Présentation */
+
+.accueil-presentation {
+    padding: 40px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.accueil-texte {
+    max-width: 700px;
+}
+
+.accueil-texte h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+.accueil-texte p {
+    line-height: 1.6;
+}
+
+
+/* Bouton */
+
+.bouton-accueil {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007acc;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* Statistiques */
+
+.accueil-statistiques {
+    margin-bottom: 40px;
+}
+
+.accueil-statistiques h2 {
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+.accueil-statistiques .statistiques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.accueil-statistiques .carte-stat {
+    flex: 1;
+    min-width: 180px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+}
+
+.accueil-statistiques .carte-stat h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.accueil-statistiques .carte-stat p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Contact */
+
+.accueil-contact {
+    padding: 30px;
+    border-top: 1px solid #ccc;
+    background-color: white;
+}
+
+.contact-texte {
+    max-width: 600px;
+}
+
+.contact-texte h2 {
+    margin-bottom: 20px;
 }
